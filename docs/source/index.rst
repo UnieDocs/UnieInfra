@@ -1,22 +1,33 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to UnieInfra
+====================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+**UnieInfra** (/ˈjuːniˈɪnfrə/) UnieInfra is the AI platform developed by UnieAI.
+Visit `our official site <https://www.unieai.com/>` for the real cases.
 
 .. note::
 
-   This project is under active development.
+   For product inquiries, please reach out to us at contact@unieai.com.
 
-Contents
---------
+Documentation
+-------------
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Getting Started
 
-   usage
-   api
+   getting_started/installation
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Serving
+
+   serving/unie_license
+   serving/unie_controller
+   serving/unie_apiserver
+   serving/unie_worker
+
+.. toctree::
+   :maxdepth: 1
+   :caption: API Reference
+
+   api_reference/unie_apiserver
