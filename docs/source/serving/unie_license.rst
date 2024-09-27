@@ -30,6 +30,8 @@ Before proceeding with the registration, ensure that you have the following:
 
 2. Obtain a license key
 
+.. code-block:: console
+
     $ export UNIEAI_UNIQUE_ID="Your unique identifier obtained from UnieAI"
     $ docker compose -f unie_license.yml up unie_license
     > python resiter.py

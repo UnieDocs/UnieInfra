@@ -2,7 +2,7 @@ Welcome to UnieInfra
 ====================
 
 **UnieInfra** (/ˈjuːniˈɪnfrə/) UnieInfra is the AI platform developed by UnieAI.
-Visit `our official site <https://www.unieai.com/>` for the real cases.
+Visit `our official site [https://www.unieai.com/](https://www.unieai.com/)` for the real cases.
 
 .. note::
 

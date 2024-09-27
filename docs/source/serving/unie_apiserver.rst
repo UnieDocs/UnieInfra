@@ -32,6 +32,8 @@ Before proceeding, ensure that you have the following:
 
 2. Start-up
 
+.. code-block:: console
+
     $ export UNIEAI_LICENSE_KEY="Your license key obtained from UnieAI"
     $ docker compose -f unie_apiserver.yml up unie_apiserver -d
 

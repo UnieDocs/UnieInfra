@@ -87,6 +87,8 @@ Before proceeding, ensure that you have the following:
 
 2. Start-up
 
+.. code-block:: console
+
     $ export UNIEAI_LICENSE_KEY="Your license key obtained from UnieAI"
     $ docker compose -f unie_worker.yml up unie_worker -d
     $ docker compose -f unie_embed.yml up unie_embed -d

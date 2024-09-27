@@ -37,7 +37,7 @@ List Available Models
 Fetches a list of all available models for completion and embeddings.
 
 **Response:**
-```json
+```python
 {
   "data": [
     {
@@ -60,7 +60,7 @@ Create Chat Completion
 Generates a completion for a given chat prompt.
 
 **Request:**
-```json
+```python
 {
   "model": "model_name",
   "messages": [
@@ -76,7 +76,7 @@ Generates a completion for a given chat prompt.
 ```
 
 **Response:**
-```json
+```python
 {
   "model": "model_name",
   "choices": [
@@ -107,7 +107,7 @@ Create Completion
 Generates a text completion based on the provided prompt.
 
 **Request:**
-```json
+```python
 {
   "model": "model_name",
   "prompt": "Once upon a time",
@@ -120,7 +120,7 @@ Generates a text completion based on the provided prompt.
 ```
 
 **Response:**
-```json
+```python
 {
   "model": "model_name",
   "choices": [
@@ -148,7 +148,7 @@ Create Embeddings
 Generates embeddings for the input text.
 
 **Request:**
-```json
+```python
 {
   "model": "model_name",
   "input": ["The quick brown fox jumps over the lazy dog."]
@@ -156,7 +156,7 @@ Generates embeddings for the input text.
 ```
 
 **Response:**
-```json
+```python
 {
   "data": [
     {
@@ -178,7 +178,7 @@ Error Handling
 
 The API responds with error messages in case of invalid requests or issues during processing. The error message follows this structure:
 
-```json
+```python
 {
   "error": {
     "message": "Error description",
