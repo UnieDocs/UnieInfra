@@ -8,7 +8,7 @@ This document details the OpenAI-compatible API endpoints, their functionalities
 OpenAI API Server Documentation
 -------------------------------
 
-This API provides OpenAI-compatible RESTful services including:
+This API provides RESTful services including:
 - **Chat Completions**
 - **Completions**
 - **Embeddings**
@@ -37,6 +37,7 @@ List Available Models
 Fetches a list of all available models for completion and embeddings.
 
 **Response:**
+
 ```python
 {
   "data": [
@@ -52,7 +53,6 @@ Fetches a list of all available models for completion and embeddings.
 Create Chat Completion
 ~~~~~~~~~~~~~~~~~~~~~~
 
-
 **Endpoint:**
 `POST /v1/chat/completions`
 
@@ -60,6 +60,7 @@ Create Chat Completion
 Generates a completion for a given chat prompt.
 
 **Request:**
+
 ```python
 {
   "model": "model_name",
@@ -76,6 +77,7 @@ Generates a completion for a given chat prompt.
 ```
 
 **Response:**
+
 ```python
 {
   "model": "model_name",
@@ -107,6 +109,7 @@ Create Completion
 Generates a text completion based on the provided prompt.
 
 **Request:**
+
 ```python
 {
   "model": "model_name",
@@ -120,6 +123,7 @@ Generates a text completion based on the provided prompt.
 ```
 
 **Response:**
+
 ```python
 {
   "model": "model_name",
@@ -148,6 +152,7 @@ Create Embeddings
 Generates embeddings for the input text.
 
 **Request:**
+
 ```python
 {
   "model": "model_name",
@@ -156,6 +161,7 @@ Generates embeddings for the input text.
 ```
 
 **Response:**
+
 ```python
 {
   "data": [

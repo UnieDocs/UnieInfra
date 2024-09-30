@@ -2,7 +2,7 @@ Welcome to UnieInfra
 ====================
 
 **UnieInfra** (/ˈjuːniˈɪnfrə/) UnieInfra is the AI platform developed by UnieAI.
-Visit `our official site [https://www.unieai.com/](https://www.unieai.com/)` for the real cases.
+Visit `our official site` [https://www.unieai.com/](https://www.unieai.com/) for the real cases.
 
 .. note::
 
@@ -31,3 +31,15 @@ Documentation
    :caption: API Reference
 
    api_reference/unie_apiserver
+
+.. toctree::
+   :maxdepth: 1
+   :caption: RAG Reference
+
+   rag_reference/unie_rag
+
+.. toctree::
+   :maxdepth: 1
+   :caption: PARSER Reference
+
+   parser_reference/unie_parser
