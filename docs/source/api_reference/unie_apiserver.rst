@@ -38,17 +38,17 @@ Fetches a list of all available models for completion and embeddings.
 
 **Response:**
 
-```python
-{
-  "data": [
+.. code-block:: python
+
     {
-      "id": "model_name",
-      "root": "model_name",
-      "permission": [/* permissions details */]
+      "data": [
+        {
+          "id": "model_name",
+          "root": "model_name",
+          "permission": [/* permissions details */]
+        }
+      ]
     }
-  ]
-}
-```
 
 Create Chat Completion
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -61,43 +61,43 @@ Generates a completion for a given chat prompt.
 
 **Request:**
 
-```python
-{
-  "model": "model_name",
-  "messages": [
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "Tell me a joke."}
-  ],
-  "temperature": 0.7,
-  "top_p": 0.9,
-  "n": 1,
-  "max_tokens": 100,
-  "stream": false
-}
-```
+.. code-block:: python
+
+    {
+      "model": "model_name",
+      "messages": [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Tell me a joke."}
+      ],
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "n": 1,
+      "max_tokens": 100,
+      "stream": false
+    }
 
 **Response:**
 
-```python
-{
-  "model": "model_name",
-  "choices": [
+.. code-block:: python
+
     {
-      "message": {
-        "role": "assistant",
-        "content": "Why don't skeletons fight each other? They don't have the guts."
-      },
-      "index": 0,
-      "finish_reason": "stop"
+      "model": "model_name",
+      "choices": [
+        {
+          "message": {
+            "role": "assistant",
+            "content": "Why don't skeletons fight each other? They don't have the guts."
+          },
+          "index": 0,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 10,
+        "completion_tokens": 20,
+        "total_tokens": 30
+      }
     }
-  ],
-  "usage": {
-    "prompt_tokens": 10,
-    "completion_tokens": 20,
-    "total_tokens": 30
-  }
-}
-```
 
 Create Completion
 ~~~~~~~~~~~~~~~~~
@@ -110,37 +110,37 @@ Generates a text completion based on the provided prompt.
 
 **Request:**
 
-```python
-{
-  "model": "model_name",
-  "prompt": "Once upon a time",
-  "max_tokens": 100,
-  "temperature": 0.7,
-  "top_p": 0.9,
-  "n": 1,
-  "stream": false
-}
-```
+.. code-block:: python
+
+    {
+      "model": "model_name",
+      "prompt": "Once upon a time",
+      "max_tokens": 100,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "n": 1,
+      "stream": false
+    }
 
 **Response:**
 
-```python
-{
-  "model": "model_name",
-  "choices": [
+.. code-block:: python
+
     {
-      "text": " there was a princess who lived in a castle.",
-      "index": 0,
-      "finish_reason": "stop"
+      "model": "model_name",
+      "choices": [
+        {
+          "text": " there was a princess who lived in a castle.",
+          "index": 0,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5,
+        "completion_tokens": 10,
+        "total_tokens": 15
+      }
     }
-  ],
-  "usage": {
-    "prompt_tokens": 5,
-    "completion_tokens": 10,
-    "total_tokens": 15
-  }
-}
-```
 
 Create Embeddings
 ~~~~~~~~~~~~~~~~~
@@ -153,47 +153,47 @@ Generates embeddings for the input text.
 
 **Request:**
 
-```python
-{
-  "model": "model_name",
-  "input": ["The quick brown fox jumps over the lazy dog."]
-}
-```
+.. code-block:: python
+
+    {
+      "model": "model_name",
+      "input": ["The quick brown fox jumps over the lazy dog."]
+    }
 
 **Response:**
 
-```python
-{
-  "data": [
+.. code-block:: python
+
     {
-      "object": "embedding",
-      "embedding": [/* embedding values */],
-      "index": 0
+      "data": [
+        {
+          "object": "embedding",
+          "embedding": [/* embedding values */],
+          "index": 0
+        }
+      ],
+      "model": "model_name",
+      "usage": {
+        "prompt_tokens": 9,
+        "total_tokens": 9
+      }
     }
-  ],
-  "model": "model_name",
-  "usage": {
-    "prompt_tokens": 9,
-    "total_tokens": 9
-  }
-}
-```
 
 Error Handling
 ~~~~~~~~~~~~~~
 
 The API responds with error messages in case of invalid requests or issues during processing. The error message follows this structure:
 
-```python
-{
-  "error": {
-    "message": "Error description",
-    "type": "invalid_request_error",
-    "param": "parameter_name",
-    "code": "error_code"
-  }
-}
-```
+.. code-block:: python
+
+    {
+      "error": {
+        "message": "Error description",
+        "type": "invalid_request_error",
+        "param": "parameter_name",
+        "code": "error_code"
+      }
+    }
 
 .. note::
 

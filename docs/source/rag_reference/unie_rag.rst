@@ -29,52 +29,52 @@ Get Rag Chat.
 
 **Request:**
 
-```python
-{
-    "tags": [
-        "rag"
-    ],
-    "summary": "Get Rag Chat",
-    "operationId": "get_rag_chat_v1_rag_chat_post",
-    "requestBody": {
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/Body_get_rag_chat_v1_rag_chat_post"
+.. code-block:: python
+
+    {
+        "tags": [
+            "rag"
+        ],
+        "summary": "Get Rag Chat",
+        "operationId": "get_rag_chat_v1_rag_chat_post",
+        "requestBody": {
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/Body_get_rag_chat_v1_rag_chat_post"
+                    }
                 }
-            }
-        },
-        "required": true
+            },
+            "required": true
+        }
     }
-}
-```
 
 **Response:**
 
-```python
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/RetrievalResultSchema"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/RetrievalResultSchema"
+                    }
                 }
             }
-        }
-    },
-    "422": {
-        "description": "Validation Error",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/HTTPValidationError"
+        },
+        "422": {
+            "description": "Validation Error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                    }
                 }
             }
         }
     }
-}
-```
 
 Get Rag Search
 ~~~~~~~~~~~~~~
@@ -87,52 +87,52 @@ Get Rag Search.
 
 **Request:**
 
-```python
-{
-    "tags": [
-        "rag"
-    ],
-    "summary": "Get Rag Search",
-    "operationId": "get_rag_search_v1_rag_search_post",
-    "requestBody": {
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/Body_get_rag_search_v1_rag_search_post"
+.. code-block:: python
+
+    {
+        "tags": [
+            "rag"
+        ],
+        "summary": "Get Rag Search",
+        "operationId": "get_rag_search_v1_rag_search_post",
+        "requestBody": {
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/Body_get_rag_search_v1_rag_search_post"
+                    }
                 }
-            }
-        },
-        "required": true
+            },
+            "required": true
+        }
     }
-}
-```
 
 **Response:**
 
-```python
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/RetrievalResultSchema"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/RetrievalResultSchema"
+                    }
                 }
             }
-        }
-    },
-    "422": {
-        "description": "Validation Error",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/HTTPValidationError"
+        },
+        "422": {
+            "description": "Validation Error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                    }
                 }
             }
         }
     }
-}
-```
 
 Get Retrieve
 ~~~~~~~~~~~~
@@ -145,49 +145,49 @@ Get Retrieve.
 
 **Request:**
 
-```python
-{
-    "tags": [
-        "rag"
-    ],
-    "summary": "Get Retrieve",
-    "operationId": "get_retrieve_v1_rag_retrieve_post",
-    "requestBody": {
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/Body_get_retrieve_v1_rag_retrieve_post"
+.. code-block:: python
+
+    {
+        "tags": [
+            "rag"
+        ],
+        "summary": "Get Retrieve",
+        "operationId": "get_retrieve_v1_rag_retrieve_post",
+        "requestBody": {
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/Body_get_retrieve_v1_rag_retrieve_post"
+                    }
                 }
-            }
-        },
-        "required": true
+            },
+            "required": true
+        }
     }
-}
-```
 
 **Response:**
 
-```python
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/RetrievalResultSchema"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/RetrievalResultSchema"
+                    }
                 }
             }
-        }
-    },
-    "422": {
-        "description": "Validation Error",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/HTTPValidationError"
+        },
+        "422": {
+            "description": "Validation Error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                    }
                 }
             }
         }
     }
-}
-```

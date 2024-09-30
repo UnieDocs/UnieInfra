@@ -30,32 +30,33 @@ Get Parser Info.
 
 **Request:**
 
-```json
-{
-    "tags": [
-        "parser"
-    ],
-    "summary": "Get Parser Info",
-    "operationId": "get_parser_info_v1_parser_info_get"
-}
-```
+.. code-block:: python
+
+    {
+        "tags": [
+            "parser"
+        ],
+        "summary": "Get Parser Info",
+        "operationId": "get_parser_info_v1_parser_info_get"
+    }
+
 
 **Response:**
 
-```json
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/ParserSchema"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/ParserSchema"
+                    }
                 }
             }
         }
     }
-}
-```
 
 Get Document Parser Info
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,74 +75,75 @@ Get Document Parser Info.
 
 **Request:**
 
-```python
-{
-    "tags": [
-        "parser"
-    ],
-    "summary": "Get Document Parser Info",
-    "operationId": "get_document_parser_info_v1_parser_info_document__doc_id__get",
-    "parameters": [
-        {
-            "name": "doc_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-                "type": "string",
-                "format": "uuid",
-                "title": "Doc Id"
+.. code-block:: python
+
+    {
+        "tags": [
+            "parser"
+        ],
+        "summary": "Get Document Parser Info",
+        "operationId": "get_document_parser_info_v1_parser_info_document__doc_id__get",
+        "parameters": [
+            {
+                "name": "doc_id",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "type": "string",
+                    "format": "uuid",
+                    "title": "Doc Id"
+                }
+            },
+            {
+                "name": "page",
+                "in": "query",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 1,
+                    "title": "Page"
+                }
+            },
+            {
+                "name": "page_size",
+                "in": "query",
+                "required": false,
+                "schema": {
+                    "type": "integer",
+                    "default": 10,
+                    "title": "Page Size"
+                }
             }
-        },
-        {
-            "name": "page",
-            "in": "query",
-            "required": false,
-            "schema": {
-                "type": "integer",
-                "default": 1,
-                "title": "Page"
-            }
-        },
-        {
-            "name": "page_size",
-            "in": "query",
-            "required": false,
-            "schema": {
-                "type": "integer",
-                "default": 10,
-                "title": "Page Size"
-            }
-        }
-    ]
-}
-```
+        ]
+    }
+
 
 **Response:**
 
-```json
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/DocumentParseStatus"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/DocumentParseStatus"
+                    }
                 }
             }
-        }
-    },
-    "422": {
-        "description": "Validation Error",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/HTTPValidationError"
+        },
+        "422": {
+            "description": "Validation Error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                    }
                 }
             }
         }
     }
-}
-```
 
 Get Chunk Info
 ~~~~~~~~~~~~~~
@@ -158,54 +160,54 @@ Get Chunk Info.
 
 **Request:**
 
-```json
-{
-    "tags": [
-        "parser"
-    ],
-    "summary": "Get Chunk Info",
-    "operationId": "get_chunk_info_v1_parser_info_chunk__chunk_id__get",
-    "parameters": [
-        {
-            "name": "chunk_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-                "type": "string",
-                "format": "uuid",
-                "title": "Chunk Id"
+.. code-block:: python
+
+    {
+        "tags": [
+            "parser"
+        ],
+        "summary": "Get Chunk Info",
+        "operationId": "get_chunk_info_v1_parser_info_chunk__chunk_id__get",
+        "parameters": [
+            {
+                "name": "chunk_id",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "type": "string",
+                    "format": "uuid",
+                    "title": "Chunk Id"
+                }
             }
-        }
-    ]
-}
-```
+        ]
+    }
 
 **Response:**
 
-```json
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/ChunkSchema"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/ChunkSchema"
+                    }
                 }
             }
-        }
-    },
-    "422": {
-        "description": "Validation Error",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/HTTPValidationError"
+        },
+        "422": {
+            "description": "Validation Error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                    }
                 }
             }
         }
     }
-}
-```
 
 Run Manual Document Parser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,51 +224,51 @@ Run Manual Document Parser.
 
 **Request:**
 
-```json
-{
-    "tags": [
-        "parser"
-    ],
-    "summary": "Run Manual Document Parser",
-    "operationId": "run_manual_document_parser_v1_parser_run_document__doc_id__put",
-    "parameters": [
-        {
-            "name": "doc_id",
-            "in": "path",
-            "required": true,
-            "schema": {
-                "type": "string",
-                "format": "uuid",
-                "title": "Doc Id"
+.. code-block:: python
+
+    {
+        "tags": [
+            "parser"
+        ],
+        "summary": "Run Manual Document Parser",
+        "operationId": "run_manual_document_parser_v1_parser_run_document__doc_id__put",
+        "parameters": [
+            {
+                "name": "doc_id",
+                "in": "path",
+                "required": true,
+                "schema": {
+                    "type": "string",
+                    "format": "uuid",
+                    "title": "Doc Id"
+                }
             }
-        }
-    ]
-}
-```
+        ]
+    }
 
 **Response:**
 
-```json
-{
-    "200": {
-        "description": "Successful Response",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/DocumentParseStatus"
+.. code-block:: python
+
+    {
+        "200": {
+            "description": "Successful Response",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/DocumentParseStatus"
+                    }
                 }
             }
-        }
-    },
-    "422": {
-        "description": "Validation Error",
-        "content": {
-            "application/json": {
-                "schema": {
-                    "$ref": "#/components/schemas/HTTPValidationError"
+        },
+        "422": {
+            "description": "Validation Error",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                    }
                 }
             }
         }
     }
-}
-```
